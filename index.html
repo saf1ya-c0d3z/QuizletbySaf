@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Website</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+   
+
+
+  
+
+
+  <body>
+    <main>
+        <header class="header">
+            <a id="viewscores" href="url">View Highscores!</a> <p id="countdown">300</p>
+            
+        </header>
+       
+        <div class="opening">
+        <h1>Coding Quiz Challenge</h1>  
+        <p>Try to answer the following code-related questions within the time limit. Beware: All incorrect answers will penalize your score/time limit by time seconds!</p>
+        <button id ="startbtn" type="button">Im Ready!</button>
+        </div>
+        <section id ="q1" class="section1 hide">
+
+            <h2 id="header2">Commonly used data types Do NOT include:</h2>
+            <ul class="answers">
+                <button  class="answrbtn" data-button="1"  type = "button">1.strings</button>
+                <button  class="answrbtn"  data-button="2" type = "button">2.booleans</button>
+                <button  class="answrbtn" data-button="3"  type = "button">3.alerts</button>
+                <button  class="answrbtn" data-button="4"  type = "button">4.numbers</button>
+               
+            </ul>
+            <button onclick="submitHandler()" id="nextquestion" type="button">Next Question</button>
+        </section>
+
+         <section id="q2" class="section1 hide">
+
+            <h2>The Condition in an if/else statement is enclosed with:</h2>
+            <ul class="answers">
+                <button class= "answrbtn" data-button="1" type = "button">1.quotes</button>
+                <button class= "answrbtn" data-button="2" type = "button">2.curly brackets</button>
+                <button class= "answrbtn" data-button="3" type = "button">3.parenthesis</button>
+                <button class= "answrbtn" data-button="4" type = "button">4.square brackets</button>
+                <button onclick="submitHandler()" id="nextquestion" type="button">Next Question</button>
+            </ul>
+        </section>
+
+
+       
+        <section id="q3" class="section1 hide">
+
+            <h2>Arrays in JavaScript can be used to store:</h2>
+            <ul class="answers">
+                <button id= "answrbtn" type = "button">1.numbers and strings</button>
+                <button id= "answrbtn" type = "button">2.other arrays</button>
+                <button id= "answrbtn" type = "button">3.booleans</button>
+                <button id= "answrbtn" type = "button">4.all of the above</button>
+                <button onclick="submitHandler()" id="nextquestion" type="button">Next Question</button>
+            </ul>
+        </section>
+        <section id="q4" class="section1 hide">
+
+            <h2>String values must be enclosed within _______ when being assigned to variables.</h2>
+            <ul class="answers">
+                <button id= "answrbtn1" type = "button" data-correct="true">1.commas</button>
+                <button id= "answrbtn2" type = "button">2.curly brackets</button>
+                <button id= "answrbtn3" type = "button">3.quotes</button>
+                <button id= "answrbtn4" type = "button">4.parenthesis</button>
+                <button onclick="submitHandler()" id="nextquestion" type="button">Next Question</button>
+            </ul>
+        </section class="section1 hide">
+
+        <section id="q5" class="section6 hide">
+            <h2>A very useful tool used during development and debugging for printing content to the debugger is:</h2>
+            <ul class="answers">
+                <button id= "answrbtn1" type = "button">1.JavaScript</button>
+                <button id= "answrbtn2" type = "button">2.terminal/bash</button>
+                <button id= "answrbtn3" type = "button">3.for loops</button>
+                <button id= "answrbtn4" type = "button">4.console log</button>
+                <button onclick="submitHandler()" id="nextquestion" type="button">Next Question</button>
+            </ul>
+        </section>
+        <section id="finish" class="section1 hide">
+
+            <h2> All done!</h2>
+            <p id="finalscore"> Your final score is: </p>
+            <p id="textprompt"> Enter intials and save your score!</p> <input type="text" id="Name" name="Name">
+        </section>
+    
+    </main>
+	<script src="script.js"></script>
+  </body>
+</html>
