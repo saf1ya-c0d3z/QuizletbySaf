@@ -14,8 +14,138 @@ var sectionQs = document.querySelectorAll(".section1")
 var userChoice = 0
 var currentQuestion = 1
 var timerInterval = null
-var correctAnswrs = ["3","2","1","4","3","2"]
+var correctAnswrs = ["3","2","1","4","3",]
+var answersBtn2 = document.querySelector(".answers1")
+const rememberMe = document.querySelector(".remember");
+const forgetMe = document.querySelector(".forget");
+const form = document.querySelector("form");
+const getName = document.querySelector("#entername");
+const submitBtn = document.querySelector("#submitname");
+const forgetBtn =document.querySelector("#forgetname");
 
+const h3 = document.querySelector("h3");
+const greeting = document.querySelector(".personal-greeting");
+
+
+submitBtn.addEventListener("click", function(){
+    localStorage.setItem("name", getName.value);
+
+    nameDisplayCheck();
+});
+
+forgetBtn.addEventListener("click", function(){
+    localStorage.removeItem("name");
+
+    nameDisplayCheck();
+});
+
+function nameDisplayCheck(){
+    if (localStorage.getItem("name")) {
+        var name = localStorage.getItem("name");
+        name
+        h3.textContent = "Congratulations"  ;
+        greeting.textContent = "Great Job" ;
+        forgetMe.style.display = "block";
+        rememberMe.style.display = "none";
+    } else {
+        h3.textContent = "How did you do?";
+        greeting.textContent = "Lets see...";
+
+        forgetMe.style.display= "none";
+        rememberMe.style.display = "block";
+    }
+}
+
+console.log(localStorage.getItem("name"));
+
+function nextQuestion(correctAnswr){ 
+
+    
+    
+    if (correctAnswr!==correctAnswrs[1]){
+     timeDown-=10
+    }
+    
+    var currentQuestionEl = document.querySelector("#q"+currentQuestion)
+    var nextQuestionEl = document.querySelector("#q"+(currentQuestion+1))
+    currentQuestionEl.classList.add("hide")  
+    nextQuestionEl.classList.remove("hide")
+    userChoice = null
+    currentQuestion++
+    
+    
+}
+
+function nextQuestion2(correctAnswr){ 
+
+    
+    
+    if (correctAnswr!==correctAnswrs[2]){
+     timeDown-=10
+    }
+    
+    var currentQuestionEl = document.querySelector("#q"+currentQuestion)
+    var nextQuestionEl = document.querySelector("#q"+(currentQuestion+1))
+    currentQuestionEl.classList.add("hide")  
+    nextQuestionEl.classList.remove("hide")
+    userChoice = null
+    currentQuestion++
+    
+    
+}
+
+function nextQuestion3(correctAnswr){ 
+
+    
+    
+    if (correctAnswr!==correctAnswrs[3]){
+     timeDown-=10
+    }
+    
+    var currentQuestionEl = document.querySelector("#q"+currentQuestion)
+    var nextQuestionEl = document.querySelector("#q"+(currentQuestion+1))
+    currentQuestionEl.classList.add("hide")  
+    nextQuestionEl.classList.remove("hide")
+    userChoice = null
+    currentQuestion++
+    
+    
+}
+
+function nextQuestion4(correctAnswr){ 
+
+    
+    
+    if (correctAnswr!==correctAnswrs[4]){
+     timeDown-=10
+    }
+    
+    var currentQuestionEl = document.querySelector("#q"+currentQuestion)
+    var nextQuestionEl = document.querySelector("#q"+(currentQuestion+1))
+    currentQuestionEl.classList.add("hide")  
+    nextQuestionEl.classList.remove("hide")
+    userChoice = null
+    currentQuestion++
+    
+    
+}
+function nextQuestion5(correctAnswr){ 
+
+    
+    
+    if (correctAnswr!==correctAnswrs[5]){
+     timeDown-=10
+    }
+    
+    var currentQuestionEl = document.querySelector("#q"+currentQuestion)
+    var nextQuestionEl = document.querySelector("#q"+(currentQuestion+1))
+    currentQuestionEl.classList.add("hide")  
+    nextQuestionEl.classList.remove("hide")
+    userChoice = null
+    currentQuestion++
+    
+    
+}
 function decreaseCnt(){
     timeDown--
     countDwnEl.innerText = timeDown
@@ -27,18 +157,133 @@ function timerCntDwn(){
     sectionOne.classList.remove("hide")  
     opening.classList.add("hide")
 }
+function submitHandler(){ 
+    if ( !userChoice){
+     return
+    }
+    
+    
+     if (userChoice!==correctAnswrs[currentQuestion-1]){
+      timeDown-=10
+     }
+     
+     var currentQuestionEl = document.querySelector("#q"+currentQuestion)
+     var nextQuestionEl = document.querySelector("#q"+(currentQuestion+1))
+     currentQuestionEl.classList.add("hide")  
+     nextQuestionEl.classList.remove("hide")
+     userChoice = null
+     currentQuestion++
+     
+     
+ }
+
+
 
 startBtn.addEventListener("click",timerCntDwn)
+
 answersBtn.addEventListener("click", function (event){
     userChoice = event.target.getAttribute('data-button')
     console.log(userChoice)
     
 })
+
+var buttonOne = document.querySelector("#data-21")
+buttonOne.addEventListener("click", function (){
+    console.log(buttonOne.getAttribute("data-button"))
+    nextQuestion(buttonOne.getAttribute("data-button"))
+})
+ 
+var buttonTwo = document.querySelector("#data-22")
+buttonTwo.addEventListener("click", function(){
+    console.log(buttonTwo.getAttribute("data-button"))
+    nextQuestion(buttonTwo.getAttribute("data-button"))
+})
+
+var buttonThree = document.querySelector("#data-23")
+buttonThree.addEventListener("click", function(){
+    console.log(buttonThree.getAttribute("data-button"))
+    nextQuestion(buttonThree.getAttribute("data-button"))
+})
+var buttonFour = document.querySelector("#data-24")
+buttonFour.addEventListener("click", function(){
+    console.log(buttonFour.getAttribute("data-button"))
+    nextQuestion(buttonFour.getAttribute("data-button"))
+})
+
+
+//
+
+var buttonFive = document.querySelector("#data-31")
+buttonFive.addEventListener("click", function (){
+    console.log(buttonFive.getAttribute("data-button"))
+    nextQuestion2(buttonFive.getAttribute("data-button"))
+})
+var buttonSix = document.querySelector("#data-32")
+buttonSix.addEventListener("click", function (){
+    console.log(buttonSix.getAttribute("data-button"))
+    nextQuestion2(buttonSix.getAttribute("data-button"))
+})
+var buttonSeven = document.querySelector("#data-33")
+buttonSeven.addEventListener("click", function (){
+    console.log(buttonSeven.getAttribute("data-button"))
+    nextQuestion2(buttonSeven.getAttribute("data-button"))
+})
+var buttonEight = document.querySelector("#data-34")
+buttonEight.addEventListener("click", function (){
+    console.log(buttonEight.getAttribute("data-button"))
+    nextQuestion2(buttonEight.getAttribute("data-button"))
+})
+//
+
+var buttonNine = document.querySelector("#data-41")
+buttonNine.addEventListener("click", function (){
+    console.log(buttonNine.getAttribute("data-button"))
+    nextQuestion3(buttonNine.getAttribute("data-button"))
+})
+var buttonTen = document.querySelector("#data-42")
+buttonTen.addEventListener("click", function (){
+    console.log(buttonTen.getAttribute("data-button"))
+    nextQuestion3(buttonTen.getAttribute("data-button"))
+})
+var button11 = document.querySelector("#data-43")
+button11.addEventListener("click", function (){
+    console.log(button11.getAttribute("data-button"))
+    nextQuestion3(button11.getAttribute("data-button"))
+})
+var button12 = document.querySelector("#data-44")
+button12.addEventListener("click", function (){
+    console.log(button12.getAttribute("data-button"))
+    nextQuestion3(button12.getAttribute("data-button"))
+})
+//
+var button13 = document.querySelector("#data-51")
+button13.addEventListener("click", function (){
+    console.log(button13.getAttribute("data-button"))
+    nextQuestion4(button13.getAttribute("data-button"))
+})
+    var button14 = document.querySelector("#data-52")
+button14.addEventListener("click", function (){
+    console.log(button14.getAttribute("data-button"))
+    nextQuestion4(button14.getAttribute("data-button"))
+})
+var button15 = document.querySelector("#data-53")
+button15.addEventListener("click", function (){
+    console.log(button15.getAttribute("data-button"))
+    nextQuestion4(button15.getAttribute("data-button"))
+})
+var button16 = document.querySelector("#data-54")
+button16.addEventListener("click", function (){
+    console.log(button16.getAttribute("data-button"))
+    nextQuestion4(button16.getAttribute("data-button"))
+})
+//
+
+
 function selectAnswr(){
     console.log(1)
 }
 
-
+/*
 function submitHandler(){ 
    if ( !userChoice){
     return
@@ -59,8 +304,9 @@ function submitHandler(){
     
     
 }
-    
-    
+*/
+
+ 
 
 
 

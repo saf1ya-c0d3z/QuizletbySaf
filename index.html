@@ -33,8 +33,7 @@
                 <button  class="answrbtn"  data-button="2" type = "button">2.booleans</button>
                 <button  class="answrbtn" data-button="3"  type = "button">3.alerts</button>
                 <button  class="answrbtn" data-button="4"  type = "button">4.numbers</button>
-               
-            </ul>
+                </ul>
             <button onclick="submitHandler()" id="nextquestion" type="button">Next Question</button>
         </section>
 
@@ -42,12 +41,12 @@
 
             <h2>The Condition in an if/else statement is enclosed with:</h2>
             <ul class="answers">
-                <button class= "answrbtn" data-button="1" type = "button">1.quotes</button>
-                <button class= "answrbtn" data-button="2" type = "button">2.curly brackets</button>
-                <button class= "answrbtn" data-button="3" type = "button">3.parenthesis</button>
-                <button class= "answrbtn" data-button="4" type = "button">4.square brackets</button>
-                <button onclick="submitHandler()" id="nextquestion" type="button">Next Question</button>
-            </ul>
+                <button class= "answrbtn"  id="data-21" data-button="1" type = "button">1.quotes</button>
+                <button class= "answrbtn"  id="data-22" data-button="2" type = "button">2.curly brackets</button>
+                <button class= "answrbtn"  id="data-23" data-button="3" type = "button">3.parenthesis</button>
+                <button class= "answrbtn"  id="data-24" data-button="4" type = "button">4.square brackets</button>
+               </ul>
+            
         </section>
 
 
@@ -56,40 +55,50 @@
 
             <h2>Arrays in JavaScript can be used to store:</h2>
             <ul class="answers">
-                <button id= "answrbtn" type = "button">1.numbers and strings</button>
-                <button id= "answrbtn" type = "button">2.other arrays</button>
-                <button id= "answrbtn" type = "button">3.booleans</button>
-                <button id= "answrbtn" type = "button">4.all of the above</button>
-                <button onclick="submitHandler()" id="nextquestion" type="button">Next Question</button>
-            </ul>
+                <button class= "answrbtn" id="data-31" data-button="1" type = "button">1.numbers and strings</button>
+                <button class= "answrbtn" id="data-32" data-button="2" type = "button">2.other arrays</button>
+                <button class= "answrbtn" id="data-33" data-button="3" type = "button">3.booleans</button>
+                <button class= "answrbtn" id="data-34" data-button="4" type = "button">4.all of the above</button>
+                </ul>
+            
         </section>
         <section id="q4" class="section1 hide">
 
             <h2>String values must be enclosed within _______ when being assigned to variables.</h2>
             <ul class="answers">
-                <button id= "answrbtn1" type = "button" data-correct="true">1.commas</button>
-                <button id= "answrbtn2" type = "button">2.curly brackets</button>
-                <button id= "answrbtn3" type = "button">3.quotes</button>
-                <button id= "answrbtn4" type = "button">4.parenthesis</button>
-                <button onclick="submitHandler()" id="nextquestion" type="button">Next Question</button>
+                <button class= "answrbtn" id="data-41" data-button="1" type = "button" data-correct="true">1.commas</button>
+                <button class= "answrbtn" id="data-42" data-button="2" type = "button">2.curly brackets</button>
+                <button class= "answrbtn" id="data-43" data-button="3" type = "button">3.quotes</button>
+                <button class= "answrbtn" id="data-44" data-button="4" type = "button">4.parenthesis</button>
             </ul>
-        </section class="section1 hide">
+            
+        </section class="section1">
 
-        <section id="q5" class="section6 hide">
+        <section id="q5" class="section1 hide">
             <h2>A very useful tool used during development and debugging for printing content to the debugger is:</h2>
             <ul class="answers">
-                <button id= "answrbtn1" type = "button">1.JavaScript</button>
-                <button id= "answrbtn2" type = "button">2.terminal/bash</button>
-                <button id= "answrbtn3" type = "button">3.for loops</button>
-                <button id= "answrbtn4" type = "button">4.console log</button>
-                <button onclick="submitHandler()" id="nextquestion" type="button">Next Question</button>
-            </ul>
+                <button class= "answrbtn" id="data-51" data-button="1" type = "button">1.JavaScript</button>
+                <button class= "answrbtn" id="data-52" data-button="2" type = "button">2.terminal/bash</button>
+                <button class= "answrbtn" id="data-53" data-button="3" type = "button">3.for loops</button>
+                <button class= "answrbtn" id="data-54" data-button="4" type = "button">4.console log</button>
+             </ul>
+             
         </section>
-        <section id="finish" class="section1 hide">
-
-            <h2> All done!</h2>
+        <section id="q6" class="section1 hide ">
+         <h2> All done!</h2>
+         <h3>Score</h3>
+         <div class="remember">
+            
             <p id="finalscore"> Your final score is: </p>
-            <p id="textprompt"> Enter intials and save your score!</p> <input type="text" id="Name" name="Name">
+            <p id="textprompt"> Enter intials and save your score!</p> 
+             <input type="text" id="entername" required>
+            <input type="submit" id="submitname" value="click me">
+         </div>
+         <div class="forget">
+           <label for="forgetname">Forget Score?</label>
+           <input type="reset" id="forgetname" value="forget">
+         </div>
+         <p class="personal-greeting">Great Job!</p>
         </section>
     
     </main>
