@@ -26,6 +26,10 @@ THEN I can save my initials and score
 
 ## Screenshot
 
+<img width="1440" alt="Screen Shot 2023-01-11 at 1 04 44 AM" src="https://user-images.githubusercontent.com/118941179/211763887-120e10cc-5688-4d4f-94ad-6c2af6915096.png">
+<img width="1440" alt="Screen Shot 2023-01-11 at 1 05 06 AM" src="https://user-images.githubusercontent.com/118941179/211763900-3d52074b-66e8-4076-9992-767ba9969779.png">
+<img width="1440" alt="Screen Shot 2023-01-11 at 1 05 24 AM" src="https://user-images.githubusercontent.com/118941179/211763905-12207b2a-15c3-4d1c-aed3-7f73d7743191.png">
+
 
 ## Link
 
