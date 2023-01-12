@@ -4,7 +4,7 @@
 
 var startBtn = document.querySelector("#startbtn")
 var countDwnEl = document.querySelector("#countdown")
-var timeDown = 300
+var timeDown = 11
 var sectionOne = document.querySelector(".section1")
 var opening = document.querySelector(".opening")
 var answersBtn = document.querySelector(".answers")
@@ -22,13 +22,13 @@ const form = document.querySelector("form");
 const getName = document.querySelector("#entername");
 const submitBtn = document.querySelector("#submitname");
 const forgetBtn =document.querySelector("#forgetname");
-
+const localStorageAnswrs = [];
 const h3 = document.querySelector("h3");
 const greeting = document.querySelector(".personal-greeting");
 
 
 submitBtn.addEventListener("click", function(){
-    localStorage.setItem("name", getName.value);
+    localStorage.setItem("name", getName.value + " " + timeDown);
 
     nameDisplayCheck();
 });
@@ -42,8 +42,9 @@ forgetBtn.addEventListener("click", function(){
 function nameDisplayCheck(){
     if (localStorage.getItem("name")) {
         var name = localStorage.getItem("name");
-        name
-        h3.textContent = "Congratulations"  ;
+         var scoreHere = document.querySelector("#alsoScoreHere")
+        scoreHere.textContent = name;
+        h3.textContent = "Congratulations" ;
         greeting.textContent = "Great Job" ;
         forgetMe.style.display = "block";
         rememberMe.style.display = "none";
@@ -126,34 +127,38 @@ function nextQuestion4(correctAnswr){
     nextQuestionEl.classList.remove("hide")
     userChoice = null
     currentQuestion++
-    
-    
-}
-function nextQuestion5(correctAnswr){ 
+    myStopFunction()
 
-    
-    
-    if (correctAnswr!==correctAnswrs[5]){
-     timeDown-=10
-    }
-    
-    var currentQuestionEl = document.querySelector("#q"+currentQuestion)
-    var nextQuestionEl = document.querySelector("#q"+(currentQuestion+1))
-    currentQuestionEl.classList.add("hide")  
-    nextQuestionEl.classList.remove("hide")
-    userChoice = null
-    currentQuestion++
+    document.querySelector("#scoreHere").textContent=timeDown
+    countDwnEl.textContent = " "
     
     
 }
+
 function decreaseCnt(){
+    
     timeDown--
+    if (timeDown<=0) 
+    {
+    timeDown=0
+    myStopFunction()
+    timeDown=0
+    currentQuestion=5 
+        }
+    
     countDwnEl.innerText = timeDown
+
 }
+
+function myStopFunction() {
+    clearInterval(timerInterval);
+}
+
 
 function timerCntDwn(){
     countDwnEl.innerText = timeDown
     timerInterval = setInterval(decreaseCnt, 1000)
+
     sectionOne.classList.remove("hide")  
     opening.classList.add("hide")
 }
