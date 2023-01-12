@@ -141,9 +141,8 @@ function decreaseCnt(){
     if (timeDown<=0) 
     {
     timeDown=0
-    myStopFunction()
-    timeDown=0
     currentQuestion=5 
+    myStopFunction()
         }
     
     countDwnEl.innerText = timeDown
