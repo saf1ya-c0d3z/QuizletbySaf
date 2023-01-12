@@ -4,7 +4,7 @@
 
 var startBtn = document.querySelector("#startbtn")
 var countDwnEl = document.querySelector("#countdown")
-var timeDown = 11
+var timeDown = 300
 var sectionOne = document.querySelector(".section1")
 var opening = document.querySelector(".opening")
 var answersBtn = document.querySelector(".answers")
